@@ -12,8 +12,17 @@ jugador.Nombre = "Pepito Perez";
 jugador.Estatura = 1.85m;
 jugador.Activo = true;
 jugador.Equipo = new Equipos() { Id = 1, Nombre = "Real Madrid Castilla" };
-jugador.Videojuegos.Add(new Videojuegos() { Id = 1, Nombre = "GTA" });
+jugador.Videojuegos = new List<Videojuegos>();
+jugador.Videojuegos.Add(new Videojuegos() { Id = 1, Nombre = "GTA V" });
 jugador.Videojuegos.Add(new Videojuegos() { Id = 2, Nombre = "FC24" });
+
+Console.WriteLine(jugador.Nombre);
+Console.WriteLine(jugador.Equipo.Nombre);
+
+foreach (var elemento in jugador.Videojuegos)
+{
+    Console.WriteLine(elemento.Nombre);
+}
 
 public class Equipos
 {
